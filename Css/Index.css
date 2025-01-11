@@ -4,4 +4,71 @@
   text-transform: capitalize;
   text-decoration: none;
   list-style: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: #121212;
+}
+.navBar{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: large;
+    margin:50px 50px !important;
+}
+.navBarBtn {
+    position: absolute;
+    left: 20px;
+}
+.navBarBtn button{
+    border: none;
+    color: white;
+    background: none;
+    padding: 0 20px;
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+    transition: all .3s;
+}
+.navBarBtn button:hover{
+    color: #3796FF;
+}
+.navBarBtn button:first-child{
+    background-color:#585858;
+    color: white;
+    border-radius: 10px;
+    font-weight: bolder;
+    transition: all .3s;
+}
+.navBarBtn button:first-child:hover{
+    background-color: #9a9a9a;
+}
+.navBarIconsSearch{
+    position: absolute;
+    left: 250px;
+}
+.navBarIconsSearch a{
+    padding: 0 15px;
+    cursor: pointer;
+    font-size: 30px;
+}
+.navBarList{
+    position: absolute;
+    right: 100px;
+    padding: 0 15px;
+}
+.navBarList a{
+    padding: 10px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.navBarList a:hover{
+    color: #3796FF;
+}
+.navBarLogo{
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
 }
