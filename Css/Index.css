@@ -164,7 +164,7 @@ main {
   flex-direction: column;
   color: white;
   margin-bottom: 5%;
-  width: 100%;
+  width: 90%;
 }
 .specialFilms h3 {
   color: white;
@@ -209,7 +209,7 @@ main {
   flex-direction: column;
   color: white;
   margin-bottom: 5%;
-  width: 100% !important;
+  width: 90% !important;
 }
 .newstIranianFilms h3 {
   color: white;
@@ -254,7 +254,7 @@ main {
   flex-direction: column;
   color: white;
   margin-bottom: 5%;
-  width: 100%;
+  width: 90%;
 }
 .simorghFilms h3 {
   color: white;
