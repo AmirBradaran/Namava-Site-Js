@@ -368,6 +368,10 @@ footer section:last-child div:first-child {
   display: flex;
   gap: 15px;
 }
+footer section:last-child div:first-child img{
+  width: 20px;
+  height: 20px;
+}
 /* End Home Page  */
 /* Start Responsive Home Page  */
 /* End Responsive Home Page  */
@@ -515,3 +519,7 @@ footer section:last-child div:first-child {
   word-spacing: 10px;
 }
 /* End Shop Page  */
+/* Start Responsive Home Page   */
+@media (max-width : 1200px){
+  
+}
