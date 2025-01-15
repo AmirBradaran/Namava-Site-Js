@@ -13,7 +13,7 @@ const nextSlidFunc=()=>{
     imgsSlidEl[activeSlider].classList.add('show')
 }
 
-setInterval(nextSlidFunc,5000)
+setInterval(nextSlidFunc,4000)
 
 nextSlidEl.addEventListener('click',nextSlidFunc)
 
