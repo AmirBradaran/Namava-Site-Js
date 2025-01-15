@@ -25,8 +25,8 @@ prevSlidEl.addEventListener('click',()=>{
 })
 
 // Finish Slider 
-
 // start modal offer //
+
 // const modal=document.querySelector('.modal')
 
 // window.onload=()=>{
