@@ -26,23 +26,62 @@ header {
   align-items: center;
 }
 /* Start Modal  */
-/* #modal{
+.modal{
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
-  width: 300px;
-  height: 200px;
+  top: 15%;
+  display: flex;
+  justify-content: center;
+  background-color: #343434aa;
+  box-shadow: 0 0 20px 2px whitesmoke;
+  width: 30%;
+  height: 50vh;
+  border-radius: 15px;
   visibility: hidden;
   opacity: 0;
   padding: 10px;
   transition: all .5s;
+  z-index: 1002;
 }
-#modal.show{
+.modal.active{
   visibility: visible !important;
   opacity: 1 !important;
-} */
+}
+/* Start Shop Home Page  */
+.shopHome {
+  margin: 2.5% 30%;
+  position: absolute;
+}
+.shopHome section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 25px;
+}
+.shopHome section h3 {
+  text-align: center;
+  margin-top: 15px;
+  color: #ffffff !important;
+  font-weight: lighter;
+}
+.shopHome section a div {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center !important;
+  border: none;
+  width: 350px !important;
+  border-radius: 10px !important;
+  padding: 15px 25px !important;
+  font-weight: lighter;
+  box-shadow: 0 0 10px white;
+  background-color: white;
+}
+.shopHome section a div p:last-child {
+  color: #10abe3;
+  word-spacing: 10px;
+}
+/* End Shop Home Page  */
 /* Start NavBar  */
 .navBar {
   position: relative;
@@ -164,7 +203,7 @@ header {
 main {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 0.5% 2.5%;
 }
@@ -215,6 +254,8 @@ main {
 /* Start Cart  */
 .films {
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   color: white;
   margin: 2.5% 0;
@@ -585,6 +626,12 @@ footer section:last-child div:first-child img {
 }
 .login-Quest a {
   color: #10abe3;
+}
+#timeLoginPage{
+  color: white;
+  background-color: #121212;
+  width: 150px;
+  height: 50px;
 }
 /* End Login & Register Page  */
 /* Start Shop Page  */
