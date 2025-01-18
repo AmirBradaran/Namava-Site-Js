@@ -627,13 +627,12 @@ footer section:last-child div:first-child img {
 .login-Quest a {
   color: #10abe3;
 }
-#timeLoginPage{
-  color: white;
+.timerLog{
   background-color: #121212;
+  color: #ffffff;
   width: 150px;
   height: 50px;
   text-align: center;
-  align-items: center;
 }
 /* End Login & Register Page  */
 /* Start Shop Page  */
