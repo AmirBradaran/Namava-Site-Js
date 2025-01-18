@@ -632,6 +632,8 @@ footer section:last-child div:first-child img {
   background-color: #121212;
   width: 150px;
   height: 50px;
+  text-align: center;
+  align-items: center;
 }
 /* End Login & Register Page  */
 /* Start Shop Page  */
