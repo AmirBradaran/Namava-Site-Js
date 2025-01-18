@@ -27,18 +27,27 @@ prevSlidEl.addEventListener('click',()=>{
 // Finish Slider 
 // start modal offer //
 
-// const modal=document.querySelector('.modal')
+const modal=document.querySelector('.modal')
 
-// window.onload=()=>{
-//     modal.classList.add('active')
-// }
-// setTimeout(()=>{
-// modal.classList.remove('active')
-// },5000)
-// window.onclick=(e)=>{
-//     if(e.target!==modal){
-//         modal.classList.remove('active')
-//     }
-// }
+window.onload=()=>{
+    modal.classList.add('active')
+}
+setTimeout(()=>{
+modal.classList.remove('active')
+}, 5000)
+window.onclick=(e)=>{
+    if(e.target!==modal){
+        modal.classList.remove('active')
+    }
+}
 
 // finish modal offer //
+// Start Time For Login Page
+
+const timeEl=document.querySelector('timeLoginPage')
+timeEl.textContent=new Date().toLocaleTimeString()
+let clock=setInterval(()=>{
+	timeEl.textContent=new Date().toLocaleTimeString()
+} , 1000)
+
+// End Time For Login Page
