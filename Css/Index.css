@@ -26,7 +26,7 @@ header {
   align-items: center;
 }
 /* Start Modal  */
-.modal{
+.modal {
   position: fixed;
   top: 15%;
   display: flex;
@@ -39,10 +39,10 @@ header {
   visibility: hidden;
   opacity: 0;
   padding: 10px;
-  transition: all .5s;
+  transition: all 0.5s;
   z-index: 1002;
 }
-.modal.active{
+.modal.active {
   visibility: visible !important;
   opacity: 1 !important;
 }
@@ -468,33 +468,33 @@ footer section:last-child div:first-child img {
   }
   /* End NavBar  */
   /* Start Slider  */
-  .slider{
+  .slider {
     height: 50vh;
   }
-  .sliderArrows i{
+  .sliderArrows i {
     display: none;
   }
   /* End Slider  */
-  main{
+  main {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 0.5% 0%;  
+    margin: 0.5% 0%;
   }
   /* Start Carts  */
-  .cartForm{
+  .cartForm {
     height: 150px !important;
   }
-  .cartForm img{
+  .cartForm img {
     height: 75%;
   }
-  .cartForm p{
+  .cartForm p {
     font-size: 10px;
   }
   /* End Carts  */
   /* Start Footer  */
-  footer section:first-child div:first-child{
+  footer section:first-child div:first-child {
     gap: 8px;
   }
   footer section:first-child div:first-child button {
@@ -505,44 +505,43 @@ footer section:last-child div:first-child img {
   footer section:first-child div:first-child button a {
     font-size: 8px;
   }
-  footer section:first-child div:first-child a{
+  footer section:first-child div:first-child a {
     font-size: 12px;
   }
-  footer section:first-child div:last-child h3{
+  footer section:first-child div:last-child h3 {
     font-size: 15px;
   }
-  footer section:first-child div:last-child img{
+  footer section:first-child div:last-child img {
     width: 25px;
     height: 25px;
   }
-  .secondSection div{
+  .secondSection div {
     align-items: center;
   }
-  .secondSection div:last-child h3{
+  .secondSection div:last-child h3 {
     font-size: 12px;
     text-align: right;
   }
-  .secondSection div:last-child p{
+  .secondSection div:last-child p {
     font-size: 8px;
   }
-  .secondSection div:first-child img{
-    width:65px ;
+  .secondSection div:first-child img {
+    width: 65px;
     height: 65px;
   }
-  footer section:last-child p{
+  footer section:last-child p {
     font-size: 10px;
     width: 80%;
   }
-  footer section:last-child div:first-child img{
+  footer section:last-child div:first-child img {
     width: 15px;
     height: 15px;
   }
   /* End Footer  */
 }
-@media (max-width : 544px){
-  footer section:first-child div{
+@media (max-width: 544px) {
+  footer section:first-child div {
     /* flex-wrap: wrap; */
-    
   }
 }
 /* End Responsive Home Page  */
@@ -627,11 +626,9 @@ footer section:last-child div:first-child img {
 .login-Quest a {
   color: #10abe3;
 }
-.timerLog{
-  background-color: #121212;
-  color: #ffffff;
-  width: 150px;
-  height: 50px;
+.time {
+  color: black;
+  font-size: 15px;
   text-align: center;
 }
 #message {
