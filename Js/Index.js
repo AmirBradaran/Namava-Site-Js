@@ -42,3 +42,28 @@ window.onclick = (e) => {
 };
 
 // finish modal offer //
+// Start Cart Next
+
+const nextCardSlidEl = document.querySelector(".next");
+const prevCardSlidEl = document.querySelector(".prev");
+
+function handleScrollNext(direction) {
+  const cards = document.querySelector(".card-content");
+  cards.scrollLeft = cards.scrollLeft +=
+    window.innerWidth / 2 > 600
+      ? window.innerWidth / 2
+      : window.innerWidth - 100;
+}
+
+function handleScrollPrev(direction) {
+  const cards = document.querySelector(".card-content");
+  cards.scrollLeft = cards.scrollLeft -=
+    window.innerWidth / 2 > 600
+      ? window.innerWidth / 2
+      : window.innerWidth - 100;
+}
+
+nextCardSlidEl.addEventListener("click", handleScrollNext);
+prevCardSlidEl.addEventListener("click", handleScrollPrev);
+
+// Finish Cart Next
