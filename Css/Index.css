@@ -229,7 +229,6 @@ main {
   color: whitesmoke;
   padding: 10px;
   border-radius: 50%;
-  width: 20px;
   border: none;
   cursor: pointer;
   transition: all 0.3s;
@@ -241,7 +240,6 @@ main {
   font-size: 20px;
   color: whitesmoke;
   padding: 10px;
-  width: 20px;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -260,41 +258,83 @@ main {
   color: white;
   margin: 2.5% 0;
   width: 100%;
+  overflow: hidden;
+  position: relative; /* To position the arrows over the container */
 }
+
 .films h3 {
   color: white;
   margin-right: 5%;
 }
+
 .carts {
   display: flex;
-  align-items: center;
-  gap: 1% !important;
+  gap: 16px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 10px;
+  scroll-snap-type: x mandatory; /* Makes the scrolling smooth and snaps to each item */
 }
+
+.carts::-webkit-scrollbar {
+  display: none;
+}
+
 .cartForm {
-  height: 350px !important;
+  height: 350px;
   width: 200px;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   border-radius: 10px;
-  transition: all 0.3s;
+  transition: all 0.25s ease;
   margin-bottom: 1%;
+  justify-content: center;
+  overflow: hidden;
+  scroll-snap-align: start; /* Ensure each item snaps to the left */
 }
+
 .cartForm:hover {
   box-shadow: 2px 2px 10px whitesmoke;
 }
+
 .cartForm img {
   width: 100%;
   height: 80%;
   border-radius: 10px 10px 0 0;
 }
+
 .cartForm p {
   width: 100%;
   text-align: right;
   padding-top: 20px;
-  padding-right: 10px !important;
+  padding-right: 10px;
   color: white;
 }
+.nextCart, .prevCart {
+  font-size: 20px;
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); }
+
+.nextCart {
+  right: 10px;
+}
+
+.prevCart {
+  left: 10px;
+}
+
 /* End Main (Body)  */
 /* Start Footer  */
 footer {

@@ -44,26 +44,43 @@ window.onclick = (e) => {
 // finish modal offer //
 // Start Cart Next
 
-const nextCardSlidEl = document.querySelector(".next");
-const prevCardSlidEl = document.querySelector(".prev");
+// Get the arrow buttons and cart container
+const nextButton = document.querySelector(".next");
+const prevButton = document.querySelector(".prev");
+const cartContainer = document.querySelector(".carts");
 
-function handleScrollNext(direction) {
-  const cards = document.querySelector(".card-content");
-  cards.scrollLeft = cards.scrollLeft +=
-    window.innerWidth / 2 > 600
-      ? window.innerWidth / 2
-      : window.innerWidth - 100;
-}
+// Scroll the cart container to the next or previous item
+nextButton.addEventListener("click", () => {
+  cartContainer.scrollBy({
+    left: 220, // Scroll right by 220px on each "next" button click
+    behavior: "smooth", // Smooth scrolling
+  });
+});
 
-function handleScrollPrev(direction) {
-  const cards = document.querySelector(".card-content");
-  cards.scrollLeft = cards.scrollLeft -=
-    window.innerWidth / 2 > 600
-      ? window.innerWidth / 2
-      : window.innerWidth - 100;
-}
+prevButton.addEventListener("click", () => {
+  cartContainer.scrollBy({
+    left: -220, // Scroll left by 220px on each "prev" button click
+    behavior: "smooth", // Smooth scrolling
+  });
+});
 
-nextCardSlidEl.addEventListener("click", handleScrollNext);
-prevCardSlidEl.addEventListener("click", handleScrollPrev);
 
 // Finish Cart Next
+
+//Start Zoom Slider 
+
+const divZomSlidEl=document.querySelectorAll('.zoomSlider-div')
+
+const removeZomSlClass=()=>{
+    for(let i=0;i<divZomSlidEl.length;i++){
+        divZomSlidEl[i].classList.remove('active')
+    }
+}
+for(let i=0;i<divZomSlidEl.length;i++){
+    divZomSlidEl[i].addEventListener('hover',()=>{
+        removeZomSlClass()
+        divZomSlidEl[i].classList.add('active')
+    })
+}
+
+// Finish Zoom Slider 
