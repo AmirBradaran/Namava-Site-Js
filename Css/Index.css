@@ -318,8 +318,7 @@ main {
   color: whitesmoke;
   padding: 10px;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  padding: 10px;
   border: none;
   cursor: pointer;
   transition: all 0.3s;
@@ -329,10 +328,17 @@ main {
 
 .nextCart {
   right: 10px;
+  transition: all .3s;
 }
-
+.nextCart:hover{
+  background-color: #565454;
+}
 .prevCart {
   left: 10px;
+  transition: all .3s;
+}
+.prevCart:hover{
+  background-color: #32343a;
 }
 
 /* End Main (Body)  */
@@ -446,7 +452,7 @@ footer section:last-child div:first-child img {
   .carts {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     margin: 0 5%;
     align-items: center;
     gap: 1%;
@@ -455,10 +461,11 @@ footer section:last-child div:first-child img {
     height: 300px !important;
     border-radius: 10px;
     transition: all 0.3s;
-    width: 100%;
+    width: 15%;
   }
   .cartForm img {
     height: 20vh;
+    width: 100%;
   }
   .carts i {
     margin-bottom: 80px !important;
