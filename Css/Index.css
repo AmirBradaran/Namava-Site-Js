@@ -439,6 +439,8 @@ footer section:last-child div:first-child img {
 @media (max-width: 1200px) {
   /* Start Slider  */
   .slider {
+    position: relative;
+    top: 4.5vh !important;
     height: 60vh;
   }
   .slider div img {
