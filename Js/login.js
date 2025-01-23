@@ -1,15 +1,6 @@
 "use strict";
 const timeEl = document.querySelector(".time");
 
-
-
-// Start Timer
-timeEl.textContent = new Date().toLocaleTimeString();
-let clock = setInterval(() => {
-  timeEl.textContent = new Date().toLocaleTimeString();
-  return
-}, 1000);
-// Finish Timer
 const loginForm = document.getElementsByClassName("login-form");
 const phoneInput = document.getElementById("phone");
 const passwordInput = document.getElementById("password");
@@ -29,3 +20,11 @@ loginForm.addEventListener("submit", (e) => {
     messageDiv.style.color = "#d9534f";
   }
 });
+
+// Start Timer
+timeEl.textContent = new Date().toLocaleTimeString();
+let clock = setInterval(() => {
+  timeEl.textContent = new Date().toLocaleTimeString();
+  return
+}, 1000);
+// Finish Timer
