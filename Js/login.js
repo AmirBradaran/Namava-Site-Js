@@ -1,39 +1,31 @@
 "use strict";
 const timeEl = document.querySelector(".time");
-const loginForm = document.getElementById("login-form");
-const phoneInput = document.getElementById("phone");
-const passwordInput = document.getElementById("password");
-const messageDiv = document.getElementById("message");
 
-const validPhone = "09379579269";
-const validPassword = "123456";
 
-// Start Timer 
 
+// Start Timer
 timeEl.textContent = new Date().toLocaleTimeString();
 let clock = setInterval(() => {
   timeEl.textContent = new Date().toLocaleTimeString();
   return
 }, 1000);
-
-// Finish Timer 
-
-// Start Login 
-
+// Finish Timer
+const loginForm = document.getElementsByClassName("login-form");
+const phoneInput = document.getElementById("phone");
+const passwordInput = document.getElementById("password");
+const messageDiv = document.getElementById("message");
+const validPhone = "09379579269";
+const validPassword = "123456";
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  const phone = phoneInput.value;
-  const password = passwordInput.value;
-  if (phone === validPhone && password === validPassword) {
-    messageDiv.textContent = "ورود موفقیت‌آمیز!",
-    messageDiv.style.color = "#28a745",
-    messageDiv.style.display = "block";
+  
+  const username = usernameInput.value.trim();
+  const password = passwordInput.value.trim();
+  
+  if (username === validUsername && password === validPassword) {
+    window.location.href = "Home.html";
   } else {
-    messageDiv.textContent =
-      "شماره تلفن یا رمز عبور اشتباه است. دوباره تلاش کنید.",
-    messageDiv.style.color = "#d9534f",
-    messageDiv.style.display = "block";
+    messageDiv.textContent = "Invalid username or password. Please try again.";
+    messageDiv.style.color = "#d9534f";
   }
 });
-
-// Finish Login 
