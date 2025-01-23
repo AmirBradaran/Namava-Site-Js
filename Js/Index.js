@@ -45,42 +45,45 @@ window.onclick = (e) => {
 // Start Cart Next
 
 // Get the arrow buttons and cart container
-const nextButton = document.querySelector(".next");
-const prevButton = document.querySelector(".prev");
-const cartContainer = document.querySelector(".carts");
 
-// Scroll the cart container to the next or previous item
-nextButton.addEventListener("click", () => {
-  cartContainer.scrollBy({
-    left: 220, // Scroll right by 220px on each "next" button click
-    behavior: "smooth", // Smooth scrolling
-  });
-});
+const nextCardSlidEl = document.querySelector(".nextCart");
+const prevCardSlidEl = document.querySelector(".prevCart");
 
-prevButton.addEventListener("click", () => {
-  cartContainer.scrollBy({
-    left: -220, // Scroll left by 220px on each "prev" button click
-    behavior: "smooth", // Smooth scrolling
-  });
-});
+function handleScrollNext(direction) {
+  const cards = document.querySelector(".carts");
+  cards.scrollLeft = cards.scrollLeft +=
+    window.innerWidth / 2 > 600
+      ? window.innerWidth / 2
+      : window.innerWidth - 100;
+}
 
+function handleScrollPrev(direction) {
+  const cards = document.querySelector(".carts");
+  cards.scrollLeft = cards.scrollLeft -=
+    window.innerWidth / 2 > 600
+      ? window.innerWidth / 2
+      : window.innerWidth - 100;
+}
+
+nextCardSlidEl.addEventListener("click", handleScrollNext);
+prevCardSlidEl.addEventListener("click", handleScrollPrev);
 
 // Finish Cart Next
 
-//Start Zoom Slider 
+//Start Zoom Slider
 
-const divZomSlidEl=document.querySelectorAll('.zoomSlider-div')
+const divZomSlidEl = document.querySelectorAll(".zoomSlider-div");
 
-const removeZomSlClass=()=>{
-    for(let i=0;i<divZomSlidEl.length;i++){
-        divZomSlidEl[i].classList.remove('active')
-    }
+const removeZomSlClass = () => {
+  for (let i = 0; i < divZomSlidEl.length; i++) {
+    divZomSlidEl[i].classList.remove("active");
+  }
+};
+for (let i = 0; i < divZomSlidEl.length; i++) {
+  divZomSlidEl[i].addEventListener("hover", () => {
+    removeZomSlClass();
+    divZomSlidEl[i].classList.add("active");
+  });
 }
-for(let i=0;i<divZomSlidEl.length;i++){
-    divZomSlidEl[i].addEventListener('hover',()=>{
-        removeZomSlClass()
-        divZomSlidEl[i].classList.add('active')
-    })
-}
 
-// Finish Zoom Slider 
+// Finish Zoom Slider
